@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Libros</title>
+
+    <style>
+       
+
+        body {
+            background-image: url('16.jpeg');
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #120000;
+        }
+
+        h2 {
+            font-size: xx-large;
+            color: #ece8e5;
+            text-align: left;
+            border: 4px solid #ffff00;
+            padding: 10px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        <!--BUSCADOR-->
+        .buscador {
+            max-width: 1000px;
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .buscador input {
+           width: auto;
+            padding: 12px;
+            border-radius: 6px;
+            border: 2px solid #ffff00;
+            font-size: 15px;
+        }
+
+        .buscador button {
+            padding: 12px 20px;
+            background-color: #ffff00;
+            color: #2e1502;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .buscador button:hover {
+            background-color: #e27805;
+            color: white;
+        }
+
+        /* RESUMEN DE RESULTADOS */
+        .resumen-busqueda{
+            color: #ffffff;
+            margin: 15px 0;
+        }
+
+        /* CUADRÍCULA DE LIBROS */
+        .libros-todos {
+            color: #2e1502;
+            padding: 30px 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .libro {
+            background-color: #eaf5f7;
+            border: 2px solid #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .libro h3 {
+            font-size: 1.2rem;
+            background: #ffff00;
+            margin-bottom: 5px;
+            padding: 5px;
+            width: 100%;
+        }
+
+        .libro p {
+            font-size: 1rem;
+            color: #666666;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .libro img {
+            max-width: 100%;
+            height: 220px;
+            object-fit: contain;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+         .buttons-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+        .btn{
+            background-color: #2e1502;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #e27805;
+        }
+
+        /* MENSAJE SIN RESULTADOS */
+        .sin-resultados {
+            color: #ffffff;
+            display: none;
+            padding: 20px 0;
+        }
+
+        /* PAGINACIÓN */
+        .pags {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .pags button {
+            padding: 10px 15px;
+            border: 1px solid #ffff00;
+            background-color: #2e1502;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pags button.activa {
+            background-color: #ffff00;
+            color: #2e1502;
+            font-weight: bold;
+        }
+
+        .pags button:hover {
+            background-color: #e27805;
+            color: white;
+        }
+
+
+        /* para los moviles Accesibilid */
+        @media (max-width: 800px) {
+            .libros-todos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .libros-todos {
+                grid-template-columns: 1fr;
+            }
+
+            .buscador {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>LIBROS</h2>
+    <!--un pequeño formulario-->
+    <form class="buscador" id="busqueda">
+        <input
+            type="search"
+            id="buscar-libro"
+            placeholder="¿Qué libro estás buscando?">
+        <button type="submit">Buscar</button>
+    </form>
+
+   <!--Resumen de lo que se encontró-->
+    <p class="resumen-busqueda" id="resumen">
+        5 libros encontrados. Página 1 de 4.
+    </p>
+
+    <!--TODOS LOS RESULTADOS-->
+    <section class="libros-todos" id="catalogo-libros">
+
+        <div class="libro">
+            <h3>Finis Mundi</h3>
+            <p>Nuevo</p>
+            <p class="precio" style="color: #724625;">Precio: 10€</p>
+            <img src="8.jpeg" alt="Portada del libro Finis Mundi">
+            
+            <div class="buttons-group">
+            <button class="btn"
+                 onclick="window.location.href='detalle.html'">
+                Ver detalle
+            </button>
+            
+            <button class="btn"
+                onclick="window.location.href='carrito.html'">
+                Comprar
+            </button>
+            </div>
+           
+        </div>
+
+        <div class="libro">
+            <h3>Matemáticas II - Bachillerato</h3>
+            <p>Usado</p>
+            <p class="precio" style="color: #724625;">Precio: 8€</p>
+            <img src="9.jpeg" alt="Libro Matemáticas II de Bachillerato">
+            < <div class="buttons-group">
+            <button class="btn"
+                 onclick="window.location.href='detalle.html'">
+                Ver detalle
+            </button>
+            
+            <button class="btn"
+                onclick="window.location.href='carrito.html'">
+                Comprar
+            </button>
+            </div>
+        </div>
+
+        <div class="libro">
+            <h3>Lote libros EBAU</h3>
+            <p>Usado</p>
+            <p class="precio" style="color: #724625;">Precio: 20€</p>
+            <img src="10.jpeg" alt="Lote de libros para la EBAU">
+             <div class="buttons-group">
+            <button class="btn"
+                 onclick="window.location.href='detalle.html'">
+                Ver detalle
+            </button>
+            
+            <button class="btn"
+                onclick="window.location.href='carrito.html'">
+                Comprar
+            </button>
+            </div>
+        </div>
+
+        <div class="libro">
+            <h3>Lote libros lectura 10 años</h3>
+            <p>Usado</p>
+            <p class="precio" style="color: #724625;">Precio: 15€</p>
+            <img src="11.jpeg" alt="Lote de libros de lectura infantil">
+             <div class="buttons-group">
+            <button class="btn"
+                 onclick="window.location.href='detalle.html'">
+                Ver detalle
+            </button>
+            
+            <button class="btn"
+                onclick="window.location.href='carrito.html'">
+                Comprar
+            </button>
+            </div>
+        </div>
+
+        <div class="libro">
+            <h3>Lote de diccionarios</h3>
+            <p>Usados</p>
+            <p class="precio" style="color: #724625;">Precio: 10€</p>
+            <img src="12.png" alt="Lote de diccionarios">
+             <div class="buttons-group">
+            <button class="btn"
+                 onclick="window.location.href='detalle.html'">
+                Ver detalle
+            </button>
+            
+            <button class="btn"
+                onclick="window.location.href='carrito.html'">
+                Comprar
+            </button>
+            </div>
+        </div>
+
+    </section>
+
+    <p class="sin-resultados" id="sin-resultados">
+        No se han encontrado libros con esa búsqueda.
+    </p>
+
+    <!--Pags-->
+    <nav class="pags" aria-label="Páginas del catálogo">
+        <button type="button" data-pagina="1" class="activa">1</button>
+        <button type="button" data-pagina="2">2</button>
+        <button type="button" data-pagina="3">3</button>
+        <button type="button" data-pagina="4">4</button>
+    </nav>
+
+
+
+
+    
+
+
+</body>
+</html>

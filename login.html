@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión - ESO me sirve</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-image: url('14.jpeg');
+      opacity: 0.9;
+      background-size:cover;
+      background-position: 50PX;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .login-box {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h1 {
+      color:#dd7513;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin: 15px 0 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #2c2626;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #dd7513;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="login-box">
+    <h1>¡Hola!</h1>
+
+    <form action="acceso.html" method="get">
+      <label for="usuario">Email o teléfono</label>
+      <input type="text" id="usuario" name="usuario"
+             placeholder="Introduce tu email o teléfono" required>
+
+      <label for="contrasena">Contraseña</label>
+      <input type="password" id="contrasena" name="contrasena"
+             placeholder="Introduce tu contraseña" required>
+
+      <button type="submit">Entrar</button>
+    </form>
+  </main>
+</body>
+</html>
+```

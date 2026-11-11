@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Acceso</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-image: url('5.jpg');
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      
+      padding: 10px;
+      border-radius: 222px;
+      box-shadow: 0 4px 15px rgba(151, 40, 40, 0.1);
+      width: 100%;
+      max-width: 450px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #fefbfb;
+      font-size: 64px;
+      font-weight: bold;
+      font-family: 'victoriana', cursive;
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      color: #666666;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    .funciones-box {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      margin-bottom: 25px;
+      background-color:  #FFFF00;
+      padding: 20px;
+    }
+
+    .opciones {
+      background-color: #f9f9f9;
+      border: 2px solid #e1e4e8;
+      border-radius: 8px;
+      padding: 15px;
+      cursor: pointer;
+      transition:  0.2s ease out;
+      text-align: left;
+      font-family: 'victoriana', cursive;
+      grid-template-rows: 3fr 3fr;
+      
+    }
+
+   
+    .opciones:hover {
+      border-color: rgb(220, 15, 15);
+      background-color: #e3f7e8;
+      transition: 0.2s ease-in-out;
+    }
+
+    .opciones input[type="radio"] {
+      margin-right: 10px;
+      cursor: pointer;
+      font-family: 'victoriana', cursive;
+    }
+
+
+    .option-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #2c2626;
+      font-family: 'victoriana', cursive;
+    }
+
+    .option-desc {
+      font-size: 18px;
+      color: #171515;
+      font-family: 'victoriana', cursive;
+      margin-top: 15px;
+      margin-left: 30px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color:  #2c2626;
+      color: rgb(238, 240, 229);
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn-submit:hover {
+      background-color:#dd7513;
+    }
+  
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h1>¿Qué hacemos hoy?</h1>
+    <form action="#" method="POST">
+      <div class="funciones-box">
+        <label class="opciones">
+          <a href="serviciosnavegacion.html">
+          <input type="radio" name="accion" value="comprador" CHECKED>
+          <span class="option-title">Comprar</span>
+          </a>
+          <div class="option-desc">Encuentra lo que necesitas</div>
+        </label>
+
+        <label class="opciones">
+          <input type="radio" name="accion" value="vendedor">
+          <span class="option-title">Vender</span>
+          <div class="option-desc">Sácatelo de encima por unos eurillos o DÓNALO!</div>
+        </label>
+
+        <label class="opciones">
+          <input type="radio" name="accion" value="agrupado">
+          <span class="option-title">Agruparme</span>
+          <div class="option-desc">Solo podrás unirte a grupos de tu ESO</div>
+        </label>
+      </div>
+
+      <button type="submit" class="btn-submit">¡Vamos a ello!</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

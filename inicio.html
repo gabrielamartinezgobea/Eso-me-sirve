@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESO</title>
+    <style>
+        /* Restablecer márgenes por defecto */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Contenedor principal que ocupa toda la pantalla */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('1.jpg');
+            background-color:  #2c2626;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Distribuye el menú arriba y los textos abajo */
+            padding: 40px;
+        }
+
+        /* Barra de navegación superior */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+
+        nav a {
+            color:#342901;
+            font-weight: bold;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 1;
+        }
+
+        /* Contenido central e inferior de la página */
+        .titulo-principal {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .titulo h1 {
+            color: #ddb113;
+            background-color:  #2c2626;
+            border-radius: 50px; /*las esquinitas redondeadas*/
+            padding: 10px;
+            font-size: 9rem; /* Texto gigante ESO */
+            font-weight: 1000;
+            letter-spacing: 40px;
+            display: flex;
+            justify-content:flex-start;
+            margin-bottom: 10px;
+            
+        }
+
+        .subtitulo {
+            color:#f3f2f0;
+            padding: 10px 20px; 
+            font-size: 4rem;
+            letter-spacing: 15px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        /* Barra de datos inferior (Fecha, Lugar y Botones) */
+        .footer-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+        }
+
+        .date-box .date {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2c2626;
+        }
+
+        .date-box .year {
+            color:  #2c2626;
+            font-size: 1.5rem;
+            opacity: 0.6;
+        }
+
+        .slogan-box {
+           font-family: cursive;
+            color: #f3f1eb;
+            font-size: 2rem;
+            text-align:center;
+            max-width: 40%;
+            line-height: 1;
+          
+        }
+
+        .botones-in {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Estilo de los botones limpios y minimalistas */
+        .login {
+            background: white;
+            color: black;
+            border: none;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .registro {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 0.85rem;
+        }
+
+        .login:hover {
+            color: #f4d35e;
+            background-color: #111111;
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .registro:hover {
+            background-color: #f4d35e;
+            color: #111111;
+            opacity: 1;
+            transform: scale(1.02);
+        }
+
+        /* Ajustes para pantallas pequeñas (Móviles) */
+        @media (max-width: 768px) {
+            .title-container h1 { font-size: 4rem; }
+            .footer-info {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+            .location-box { text-align: left; max-width: 100%; font-size: 1.4rem; }
+            nav { display: none; } /* Oculta el menú en móviles para mantenerlo limpio */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-section">
+     
+
+        <!-- arriba del todo, nombre de la empresa/founder-->
+        <header>
+            <div class="logo">gamamkt.sl</div>
+            <nav>
+                <a href="#">Qué es esto?</a>
+                <a href="#">Qué hacemos?</a>
+                <a href="#">Hablamos?</a>
+            </nav>
+        </header>
+
+        <!-- Contenido principal superpuesto -->
+        <div class="titulo-principal">
+            <div class="titulo">
+                <h1>ESO</h1>
+                <p class="subtitulo">ME SIRVE</p>
+            </div>
+
+            <!-- Información inferior -->
+            <div class="footer-info">
+                <div class="date-box">
+                    <div class="date">Hoy es 25.07</div>
+                    <div class="year">del 2026</div>
+                </div>
+
+                <div class="slogan-box">
+                hay cosas que no deben quedarse en estas 4 paredes<br>
+                </div>
+
+                <div class="botones-in">
+                    
+                    <a href="acceso.html">
+                        <button class="login">Ingresar</button>
+                    </a>
+                        <!--debo hacer referencia a mi html de formulario -->
+                        <a href="formulario.html">
+                            <button class="registro">No tengo cuenta</button>
+
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

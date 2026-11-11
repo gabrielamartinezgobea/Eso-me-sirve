@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias</title>
+    <style>
+      
+      body {
+      background-image: url('6.jpeg');
+      background-size:auto;
+    }
+      
+        .categorias-todos {
+            
+            font-family: arial, sans-serif;
+            font-size: 35px;
+            color: #f8f4f2;
+            padding: 10px 20px; /*CON RESPECTO AL TODO*/
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            
+        }
+        .categs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 20px;
+            gap: 60px;
+            color: #47099e;
+           
+        }
+        .cat-card {
+            background-color: #eaf5f7;
+            border: 1px solid #e0e0e0;
+            padding: 10px 30px;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .cat-card h3 { font-size: 1.4rem;  Background: #FFFF00; margin-bottom: 15px; }
+        .cat-card p { font-size: 1rem; color: #666666; line-height: 1.8; }
+    </style>
+</head>
+<body>
+    
+    
+    <section class="categorias-todos">
+        <h2>¿Qué quieres comprar?</h2>
+        <div class="categs-grid">
+            <a href="cataloge.html" class="libros">
+            <div class="cat-card"><h3>Libros</h3><p>de asignaturas y novelas</p></div>
+            </a>
+            
+            <div class="cat-card"><h3>Mochilas</h3><p>maletines,bolsos</p></div>
+            <div class="cat-card"><h3>Útiles de escritorio</h3><p>todo lo que necesitas para estudiar</p></div>
+            <div class="cat-card"><h3>Tecnología escolar</h3><p>tablets, kindle y accesorios</p></div>
+            <div class="cat-card"><h3>Uniformes</h3><p>camisetas, pantalones, camisas, faldas, jerseys</p></div>
+            <div class="cat-card"><h3>Piezas de trabajos</h3><p>reutilización de materiales de proyectos</p></div>
+
+        </div>
+    </section>

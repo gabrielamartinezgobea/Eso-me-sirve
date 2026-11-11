@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Creación de Cuenta</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      
+      background-color:#724625; /* Fondo oscuro */
+      color: #ffffff;
+      padding: 40px 20px;
+    }
+
+    .form-container {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      gap: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 6px;
+      font-size: 14px;
+      background-color: #ffffff;
+      color: #333333;
+    }
+
+    /* Estilo de desplegablesss*/
+    select {
+      background-color:  #ebed6f;
+      color: #282222;
+      border: 1px solid #554444;
+    }
+
+
+    .checkbox-group {
+      margin: 18px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    /* NUEVO: Contenedor para alinear y separar los botones */
+    .buttons-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color:  #FFFF00;
+      color: #111111;
+      font-weight: bold;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #eb4808;
+      color: #d1d1c4;
+    }
+
+    .btn-volver {
+      width: 100%;
+      padding: 14px;
+      background-color: #e8e8de;
+      color: #fd0202;
+      border: 1px solid #e9ad15;
+      font-size: 15px; 
+      font-weight: bold;
+      text-align: center;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .btn-volver:hover {
+      background-color: #1c1c00;
+      color: #d1d1c4;
+    }
+
+    /*accesiblidad*/
+    /* En móviles se pone en 1 sola columna para que no se corten los boxes*/
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .full-width {
+        grid-column: span 1;
+      }
+      /* Para q los botones se apilan uno abajo del otro en pantallas chicas */
+      .buttons-group {
+        flex-direction: column;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <form action="#" method="POST">
+       
+      <p>FORMULARIO DE CREACIÓN DE CUENTA</p>
+
+      <div class="form-grid">
+       
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="text" name="apellidos" placeholder="Tus Apellidos" required>
+        
+        <input type="email" name="email" placeholder="tu email" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        
+        <input type="text" name="nick" placeholder="Tu NICKNAME: Puede ser.. PapaOso" required>
+        <input type="text" name="password" class="input-title" title="Debe tener 4 caracteres"  placeholder="Crea una contraseña" required>
+       
+
+        <select name="instituto" required>
+          <option value="" disabled selected>Elige el Instituto</option>
+          <option value="IES Jorge Manrique">IES Jorge Manrique</option>
+          <option value="IES Pintor Antonio López">IES Pintor Antonio López</option>
+          <option value="IES José Luis Sampedro">IES José Luis Sampedro</option>
+          <option value="IES Montserrat Caballé">IES Montserrat Caballé</option>
+          <option value="Humanitas - Tres Cantos">Humanitas - Tres Cantos</option>
+          <option value="Colegio Nuestra Señora de la Merced">Colegio Nuestra Señora de la Merced</option> 
+        </select>
+
+        <select name="rol" required>
+          <option value="" disabled selected>Qué rol te asignamos?</option>
+          <option value="padre">Padre/Madre</option>
+          <option value="cuidador">Cuidador</option>
+          <option value="abu">Abuelo/Abuela</option>
+        </select>
+      </div>
+
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="privacidad" required>
+          Doy mi consentimiento para el uso de mis datos para los fines indicados en las políticas de privacidad.
+        </label>
+        <label>
+          <input type="checkbox" name="publicidad" checked>
+          Doy mi consentimiento para que mis datos se utilicen para recibir publicidad de esta empresa. (Opcional)
+        </label>
+      </div>
+
+      <!--Agrupación para poderlos hacer flex..-->
+      <div class="buttons-group">
+        <button type="submit">Crear cuenta</button>
+        <a href="inicio.html" class="btn-volver">Salir</a>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>

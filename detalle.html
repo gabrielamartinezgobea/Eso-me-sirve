@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto</title>
+
+    <style>
+        body {
+            background-image: url('17.jpeg');
+            background-position: center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #2a0303;
+            border: #f16501;
+            color: #2e1502;
+            padding: 50px;
+        }
+
+        .producto {
+            max-width: 450px;
+            margin: auto;
+            background-color: rgb(245, 245, 164);
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 200px;
+            max-width: 100%;
+        }
+
+        button {
+            background-color: #f16501;
+            color: white;
+            font-size: medium;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="producto">
+
+        <h1>Finis Mundi</h1>
+
+        <img src="8.jpeg" alt="Portada del libro Finis Mundi">
+
+        <p><strong>Estado:</strong> Nuevo</p>
+
+        <p>
+            Libro de Laura Gallego.
+            Se lo pidieron a mi hijx en 3ESO.
+            Es de la editorial Vinces Vives
+        </p>
+
+        <h2>Precio: 10 €</h2>
+
+        <button onclick="window.location.href='carrito.html?producto=Finis%20Mundi&precio=10'">
+            Añadir al carrito
+        </button>
+
+        <a href="catalogo.html">← Volver al catálogo</a>
+
+    </main>
+
+</body>
+</html>
