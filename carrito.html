@@ -99,29 +99,8 @@
         <!-- Opción de pagar -->
         <button class="btn-pagar" onclick="procesarPago()">Proceder al Pago</button>
         
-        <a href="javascript:history.back()" class="Volver">← Volver al catálogo</a>
+        <a href="cataloge.html" class="Volver">← Volver al catálogo</a>
     </div>
-
-    <script>
-        // Función de JavaScript para leer los datos que vienen en la URL
-        function obtenerDatosURL() {
-            const params = new URLSearchParams(window.location.search);
-            const producto = params.get('producto') || "Ningún producto seleccionado";
-            const precio = params.get('precio') || "0";
-
-            // Insertar los valores dinámicamente en el HTML
-            document.getElementById('nombre-producto').innerText = producto;
-            document.getElementById('precio-producto').innerText = precio + " €";
-        }
-
-        // Simulación de la acción de pagar
-        function procesarPago() {
-            alert('¡Gracias por tu compra! Redirigiendo a la pasarela de pago segura...');
-        }
-
-        // Ejecutar la función automáticamente al cargar la página
-        window.onload = obtenerDatosURL;
-    </script>
 
 </body>
 </html>
