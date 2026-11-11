@@ -1,0 +1,27 @@
+
+/* Estilos generales de ESO me sirve */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: Arial, sans-serif;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
